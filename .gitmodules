@@ -1,0 +1,3 @@
+[submodule "rich-base"]
+	path = rich-base
+	url = https://github.com/okandemirel/rich-base.git
