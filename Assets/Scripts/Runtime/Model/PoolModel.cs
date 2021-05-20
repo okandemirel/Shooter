@@ -57,6 +57,12 @@ namespace Runtime.Model
 
                 for (int i = 0; i < pool.Value.Amount; i++)
                 {
+                    if (pool.Key == PoolType.Bullet && pool.Value.PoolObject == null)
+                    {
+                        pool.Value.PoolObject =
+                            Resources.Load<GameObject>("Prefabs/Bullet Prefab"); //Data atanmadıysa diye geçici çözüm
+                    }
+
                     var go = Object.Instantiate(pool.Value.PoolObject, _poolParent.transform, true);
                     go.SetActive(false);
                     pool.Value.Type = pool.Key;
