@@ -1,8 +1,9 @@
 ﻿using System;
 using DG.Tweening;
+using Modules.ObjectPooler.Scripts.Runtime.Enums;
+using Modules.ObjectPooler.Scripts.Runtime.Key;
 using Rich.Base.Runtime.Abstract.View;
 using Runtime.Data.ValueObject;
-using Runtime.Enums;
 using Runtime.Key;
 using Unity.Mathematics;
 using UnityEngine;
@@ -18,7 +19,6 @@ namespace Runtime.Views
         public UnityAction<OnEnqueuePooledObjectParams> onEnqueueBullet = delegate { };
 
         #endregion
-
 
         #region Self Variables
 
@@ -51,15 +51,18 @@ namespace Runtime.Views
 
             GiveForwardForce();
 
-            EnqueueBullet();
+            if (!Vo.IsDestrcutable)
+            {
+                EnqueueBullet(PoolType.Bullet);
+            }
         }
 
-        private void EnqueueBullet()
+        private void EnqueueBullet(PoolType type)
         {
             DOVirtual.DelayedCall(Vo.TimeToEnqueue, () => onEnqueueBullet.Invoke(new OnEnqueuePooledObjectParams()
             {
                 PooledObject = gameObject,
-                PooledObjectType = PoolType.Bullet
+                PooledObjectType = type
             }));
         }
 
@@ -91,6 +94,12 @@ namespace Runtime.Views
             transform.localPosition = Vector3.zero;
             _rigidbody.velocity = Vector3.zero;
             _rigidbody.angularVelocity = Vector3.zero;
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            Debug.LogWarning("Triggered");
+            EnqueueBullet(PoolType.PatlayanBullet);
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using Rich.Base.Runtime.Concrete.Injectable.Mediator;
+﻿using Modules.ObjectPooler.Scripts.Runtime.Key;
+using Modules.ObjectPooler.Scripts.Runtime.Signals;
+using Rich.Base.Runtime.Concrete.Injectable.Mediator;
 using Runtime.Key;
 using Runtime.Signals;
 using Runtime.Views;
@@ -10,6 +12,7 @@ namespace Runtime.Mediators
     {
         [Inject] public BulletView view { get; set; }
         [Inject] public GameSignals GameSignals { get; set; }
+        [Inject] public ObjectPoolingSignals ObjectPoolingSignals { get; set; }
 
         public override void OnRegister()
         {
@@ -25,7 +28,7 @@ namespace Runtime.Mediators
 
         private void OnEnqueueBullet(OnEnqueuePooledObjectParams onEnqueuePooledObjectParams)
         {
-            GameSignals.onEnqueuePooledObject.Dispatch(onEnqueuePooledObjectParams);
+            ObjectPoolingSignals.onEnqueuePooledObject.Dispatch(onEnqueuePooledObjectParams);
         }
     }
 }

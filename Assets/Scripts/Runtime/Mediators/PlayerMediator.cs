@@ -1,4 +1,6 @@
-﻿using Rich.Base.Runtime.Concrete.Injectable.Mediator;
+﻿using Modules.ObjectPooler.Scripts.Runtime.Enums;
+using Modules.ObjectPooler.Scripts.Runtime.Signals;
+using Rich.Base.Runtime.Concrete.Injectable.Mediator;
 using Runtime.Key;
 using Runtime.Signals;
 using Runtime.Views;
@@ -10,6 +12,7 @@ namespace Runtime.Mediators
     {
         [Inject] public PlayerView view { get; set; }
         [Inject] public GameSignals GameSignals { get; set; }
+        [Inject] public ObjectPoolingSignals ObjectPoolingSignals { get; set; }
         [Inject] public InputSignals InputSignals { get; set; }
 
 
@@ -47,13 +50,22 @@ namespace Runtime.Mediators
                 movementInputParams.MovementSpeed);
         }
 
-        private void OnTriggerDequeuePoolableObject()
+        private void OnTriggerDequeuePoolableObject(int poolValue)
         {
             //Shotgun type firing will be added here
             var bulletCount = Random.Range(1, view.Vo.ShotgunBulletCount);
             for (int i = 0; i < bulletCount; i++)
             {
-                GameSignals.onDequeuePoolObject.Dispatch(view.GunObject.position);
+                switch (poolValue)
+                {
+                    case 1:
+                        ObjectPoolingSignals.onDequeuePoolObject.Dispatch(PoolType.Bullet, view.GunObject.position);
+                        break;
+                    case 2:
+                        ObjectPoolingSignals.onDequeuePoolObject.Dispatch(PoolType.PatlayanBullet,
+                            view.GunObject.position);
+                        break;
+                }
             }
 
             GameSignals.onBulletFired.Dispatch(bulletCount);

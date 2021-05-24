@@ -1,7 +1,7 @@
-﻿using Runtime.Model;
+﻿using Modules.ObjectPooler.Scripts.Runtime.Model;
 using strange.extensions.command.impl;
 
-namespace Runtime.Controller
+namespace Modules.ObjectPooler.Scripts.Runtime.Controller
 {
     public class OnPoolingInitializer : Command
     {

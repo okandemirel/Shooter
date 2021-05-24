@@ -60,7 +60,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: serializationData.SerializationNodes.Array.size
-    value: 22
+    value: 38
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: serializationData.SerializationNodes.Array.data[0].Name
@@ -134,7 +134,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: serializationData.SerializationNodes.Array.data[5].Data
-    value: 1
+    value: 2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: serializationData.SerializationNodes.Array.data[6].Name
@@ -258,39 +258,39 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: serializationData.SerializationNodes.Array.data[16].Name
-    value: 
+    value: IsDestrcutable
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: serializationData.SerializationNodes.Array.data[16].Entry
-    value: 8
+    value: 5
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: serializationData.SerializationNodes.Array.data[16].Data
-    value: 
+    value: false
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: serializationData.SerializationNodes.Array.data[17].Name
-    value: Type
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: serializationData.SerializationNodes.Array.data[17].Entry
-    value: 3
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: serializationData.SerializationNodes.Array.data[17].Data
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: serializationData.SerializationNodes.Array.data[18].Name
-    value: 
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
-    propertyPath: serializationData.SerializationNodes.Array.data[18].Entry
     value: 8
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: serializationData.SerializationNodes.Array.data[18].Data
+    propertyPath: serializationData.SerializationNodes.Array.data[17].Data
     value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[18].Name
+    value: Type
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[18].Entry
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[18].Data
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: serializationData.SerializationNodes.Array.data[19].Name
@@ -310,7 +310,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: serializationData.SerializationNodes.Array.data[20].Entry
-    value: 13
+    value: 8
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: serializationData.SerializationNodes.Array.data[20].Data
@@ -322,10 +322,202 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: serializationData.SerializationNodes.Array.data[21].Entry
-    value: 8
+    value: 7
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: serializationData.SerializationNodes.Array.data[21].Data
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[22].Name
+    value: $k
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[22].Entry
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[22].Data
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[23].Name
+    value: $v
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[23].Entry
+    value: 7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[23].Data
+    value: 4|Runtime.Data.ValueObject.ObjectPoolVO, Assembly-CSharp
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[24].Name
+    value: PoolObject
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[24].Entry
+    value: 6
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[24].Data
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[25].Name
+    value: Amount
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[25].Entry
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[25].Data
+    value: 100
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[26].Name
+    value: Vo
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[26].Entry
+    value: 7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[26].Data
+    value: 5|Runtime.Data.ValueObject.BulletVO, Assembly-CSharp
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[27].Name
+    value: TimeToEnqueue
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[27].Entry
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[27].Data
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[28].Name
+    value: BulletSpeed
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[28].Entry
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[28].Data
+    value: 76
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[29].Name
+    value: minDeflection
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[29].Entry
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[29].Data
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[30].Name
+    value: maxDeflection
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[30].Entry
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[30].Data
+    value: 6.33
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[31].Name
+    value: IsDestrcutable
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[31].Entry
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[31].Data
+    value: true
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[32].Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[32].Entry
+    value: 8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[32].Data
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[33].Name
+    value: Type
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[33].Entry
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[33].Data
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[34].Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[34].Entry
+    value: 8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[34].Data
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[35].Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[35].Entry
+    value: 8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[35].Data
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[36].Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[36].Entry
+    value: 13
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[36].Data
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[37].Name
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[37].Entry
+    value: 8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: serializationData.SerializationNodes.Array.data[37].Data
     value: 
     objectReference: {fileID: 0}
   m_ExcludedProperties: []

@@ -1,7 +1,7 @@
-﻿using Runtime.Enums;
+﻿using Modules.ObjectPooler.Scripts.Runtime.Enums;
 using UnityEngine;
 
-namespace Runtime.Key
+namespace Modules.ObjectPooler.Scripts.Runtime.Key
 {
     public struct OnEnqueuePooledObjectParams
     {

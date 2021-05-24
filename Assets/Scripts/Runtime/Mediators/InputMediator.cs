@@ -54,9 +54,9 @@ namespace Runtime.Mediators
         }
 
 
-        private void OnDequeueBullet()
+        private void OnDequeueBullet(int poolValue)
         {
-            GameSignals.onTriggerDequeuePoolableObject.Dispatch();
+            GameSignals.onTriggerDequeuePoolableObject.Dispatch(poolValue);
         }
 
         private void OnInputDataInitialize(LevelStartInputDataHolderParam inputData)

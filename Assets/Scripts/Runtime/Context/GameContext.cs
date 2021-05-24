@@ -9,6 +9,7 @@ using Runtime.Model;
 using Runtime.Signals;
 using Runtime.Utility;
 using Runtime.Views;
+using UnityEngine;
 
 namespace Runtime.Context
 {
@@ -31,7 +32,6 @@ namespace Runtime.Context
 
 
             //Injection Bindings
-            injectionBinder.Bind<IPoolModel>().To<PoolModel>().CrossContext().ToSingleton();
             injectionBinder.Bind<IGameModel>().To<GameModel>().CrossContext().ToSingleton();
             injectionBinder.Bind<IInputModel>().To<InputModel>().CrossContext().ToSingleton();
             injectionBinder.Bind<IPlayerModel>().To<PlayerModel>().CrossContext().ToSingleton();
@@ -46,10 +46,7 @@ namespace Runtime.Context
             mediationBinder.BindView<ScoreTableView>().ToMediator<ScoreTableMediator>();
 
             //Command Bindings
-
-            //In-Game
-            commandBinder.Bind(_gameSignals.onDequeuePoolObject).To<OnDequeuePoolObjectCommand>();
-            commandBinder.Bind(_gameSignals.onEnqueuePooledObject).To<OnEnqueuePooledObjectCommand>();
+            
 
             //Level Behaviour
             commandBinder.Bind(_gameSignals.onLevelInitialize).InSequence()
@@ -63,7 +60,6 @@ namespace Runtime.Context
             //Game Initalizer    
             commandBinder.Bind(_gameSignals.onGameInitialize).InSequence()
                 .To<OnSRDebuggerInitializerFixCommand>()
-                .To<OnPoolingInitializer>()
                 .To<OnSROptionsInjectionCommand>()
                 .To<OnLevelInitializerCommand>();
         }
@@ -71,6 +67,7 @@ namespace Runtime.Context
         public override void Launch()
         {
             base.Launch();
+            Application.targetFrameRate = 60;
             _gameSignals.onGameInitialize.Dispatch();
         }
     }

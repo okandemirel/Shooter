@@ -1,0 +1,3 @@
+Object Pooling Module
+
+In Assets folder, there is a prefab root. Just drag that prefab to scene and thats enough for initialization. This Module has its own signal class and scriptable object, adding it resources will guide you.

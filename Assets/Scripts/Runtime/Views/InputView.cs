@@ -17,7 +17,7 @@ namespace Runtime.Views
         public UnityAction<float, float> onMovementInputTaken = delegate { };
 
         public UnityAction<Vector3> onRotationInputTaken = delegate { };
-        public UnityAction onDequeueBullet = delegate { };
+        public UnityAction<int> onDequeueBullet = delegate { };
 
         #endregion
 
@@ -55,7 +55,12 @@ namespace Runtime.Views
 
             if (Input.GetMouseButtonDown(0) && !IsPointerOverUIElement())
             {
-                onDequeueBullet.Invoke();
+                onDequeueBullet.Invoke(1);
+            }
+
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                onDequeueBullet.Invoke(2);
             }
 
 

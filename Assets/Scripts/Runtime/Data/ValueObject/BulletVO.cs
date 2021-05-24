@@ -9,5 +9,6 @@ namespace Runtime.Data.ValueObject
         [Range(0, 10)] public int TimeToEnqueue;
         [Range(0, 100)] public int BulletSpeed;
         [Range(0, 10)] public float minDeflection, maxDeflection;
+        public bool IsDestrcutable;
     }
 }

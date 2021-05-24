@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
+using Modules.ObjectPooler.Scripts.Runtime.Data.UnityObject;
+using Modules.ObjectPooler.Scripts.Runtime.Enums;
 using Runtime.Data.UnityObject;
-using Runtime.Enums;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-namespace Runtime.Model
+namespace Modules.ObjectPooler.Scripts.Runtime.Model
 {
     [ShowInInspector]
     public interface IPoolModel

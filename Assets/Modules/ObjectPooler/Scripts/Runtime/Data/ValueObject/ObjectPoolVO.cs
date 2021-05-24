@@ -1,11 +1,9 @@
 ﻿using System;
-using Runtime.Enums;
+using Modules.ObjectPooler.Scripts.Runtime.Enums;
 using Sirenix.OdinInspector;
-using UnityEditor;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
-namespace Runtime.Data.ValueObject
+namespace Modules.ObjectPooler.Scripts.Runtime.Data.ValueObject
 {
     [Serializable]
     [HideReferenceObjectPicker]

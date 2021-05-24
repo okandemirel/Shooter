@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Modules.ObjectPooler.Scripts.Runtime.Data.UnityObject;
+using Modules.ObjectPooler.Scripts.Runtime.Enums;
 using Runtime.Data.UnityObject;
 using Runtime.Data.ValueObject;
-using Runtime.Enums;
+using Runtime.Model;
 using Runtime.Views;
 using Sirenix.OdinInspector;
 using strange.extensions.context.api;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace Runtime.Model
+namespace Modules.ObjectPooler.Scripts.Runtime.Model
 {
     public class PoolModel : IPoolModel
     {
@@ -71,8 +72,9 @@ namespace Runtime.Model
                         case PoolType.Bullet:
                             go.GetComponent<BulletView>().Vo = (BulletVO) pool.Value.Vo;
                             break;
-                        default:
-                            throw new ArgumentOutOfRangeException();
+                        case PoolType.PatlayanBullet:
+                            go.GetComponent<BulletView>().Vo = (BulletVO) pool.Value.Vo;
+                            break;
                     }
 
 
